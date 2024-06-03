@@ -28,8 +28,9 @@ const CustomAreaChart = ({ data }) => {
     };
 
     return (
-        <div>
-            <ResponsiveContainer className="p-2" width="100%" height={is500px ? 400 : 300}>
+        <div className="bg-[#1a1a1f] rounded-lg p-4">
+            <h1 className="text-center text-lg font-semibold my-2">Event count</h1>
+            <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
                 <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="eventType" />
@@ -43,7 +44,6 @@ const CustomAreaChart = ({ data }) => {
                     <Area type="monotone" dataKey="count" name='Event Count' stroke="#fff" fill="#ff0088" />
                 </AreaChart>
             </ResponsiveContainer>
-            <h1 className="text-center text-lg font-semibold bg-blue-600">Area Graph</h1>
         </div>
     );
 };

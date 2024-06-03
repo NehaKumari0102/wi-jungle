@@ -47,8 +47,9 @@ const CustomLineChart = ({ data }) => {
   };
 
   return (
-    <div>
-      <ResponsiveContainer className="p-2" width="100%" height={is500px ? 400 : 300}>
+    <div className="bg-[#1a1a1f] rounded-lg p-4 w-full">
+      <h1 className="text-center text-lg font-semibold my-4">Dest Port vs Dest IP</h1>
+      <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
         <LineChart
           data={chartData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -66,7 +67,6 @@ const CustomLineChart = ({ data }) => {
           />
         </LineChart>
       </ResponsiveContainer>
-      <h1 className="text-center text-lg font-semibold bg-blue-600">Line Graph</h1>
     </div>
   );
 };

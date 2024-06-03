@@ -31,8 +31,9 @@ const CustomBarChart = ({ data }) => {
   };
 
   return (
-    <div>
-      <ResponsiveContainer className="p-2" width="100%" height={is500px ? 400 : 300}>
+    <div className="bg-[#1a1a1f] rounded-lg p-4">
+      <h1 className="text-center text-lg font-semibold my-2">Proto Count</h1>
+      <ResponsiveContainer  width="100%" height={is500px ? 400 : 300}>
         <BarChart
           data={chartData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -52,7 +53,6 @@ const CustomBarChart = ({ data }) => {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-      <h1 className="text-center text-lg font-semibold bg-blue-600">Bar Graph</h1>
     </div>
   );
 };
