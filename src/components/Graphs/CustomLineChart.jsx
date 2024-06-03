@@ -13,7 +13,7 @@ import {
 
 const CustomLineChart = ({ data }) => {
   const [chartData, setChartData] = useState([]);
-  const is500px = useMediaQuery("(min-width: 500px)");
+  const is600px = useMediaQuery("(min-width: 600px)");
 
   useEffect(() => {
     processChartData();
@@ -49,7 +49,7 @@ const CustomLineChart = ({ data }) => {
   return (
     <div className="bg-[#1a1a1f] rounded-lg p-4 w-full">
       <h1 className="text-center text-lg font-semibold my-4">Dest Port vs Dest IP</h1>
-      <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
+      <ResponsiveContainer width="100%" height={is600px ? 400 : 250}>
         <LineChart
           data={chartData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}

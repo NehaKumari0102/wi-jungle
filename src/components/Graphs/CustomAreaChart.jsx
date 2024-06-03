@@ -30,7 +30,7 @@ const CustomAreaChart = ({ data }) => {
     return (
         <div className="bg-[#1a1a1f] rounded-lg p-4">
             <h1 className="text-center text-lg font-semibold my-2">Event count</h1>
-            <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
+            <ResponsiveContainer width="100%" height={is500px ? 350 : 250}>
                 <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="eventType" />

@@ -39,7 +39,7 @@ const CustomScatterGraph = ({ data }) => {
     return (
         <div className="bg-[#1a1a1f] rounded-lg p-4 w-full">
             <h1 className="text-center text-lg font-semibold my-4">Src IP and Src Port</h1>
-            <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
+            <ResponsiveContainer width="100%" height={is500px ? 400 : 250}>
                 <ScatterChart margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="src_ip" type="category" name="Source IP" />
