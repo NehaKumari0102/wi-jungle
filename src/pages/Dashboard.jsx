@@ -27,9 +27,10 @@ const Dashboard = ({ list }) => {
         <div className="Dashboard w-full flex flex-row">
           <SidePanel />
 
-          <div className="Graphs w-full gap-y-4 pl-20 flex flex-col p-4">
+          <div className="Graphs w-full ms:gap-y-6 gap-y-3 flex flex-col p-6 sm:ml-20 ml-0">
+            <h1 className="sm:text-2xl text-lg font-semibold sm:mb-4">Dashboard</h1>
             <div
-              className="gridLayout gap-6 w-full"
+              className="gridLayout sm:gap-6 gap-3 w-full"
               style={containerStyle}
             >
               <CustomPieChart data={list} />

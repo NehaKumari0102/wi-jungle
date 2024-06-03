@@ -1,18 +1,25 @@
 import React from "react";
-import user from '../../assets/user.jpg'
+import user from "../../assets/user.jpg";
 import { LuSearch } from "react-icons/lu";
 import { IoIosPulse } from "react-icons/io";
+import { CgMenuGridO } from "react-icons/cg";
 
 const NavBar = () => {
   return (
-    <nav className="py-4 px-10 bg-[#1a1a1f] sticky top-0 z-10 flex flex-row items-center justify-between">
-      <h1 className="text-2xl font-semibold">Wi Jungle Dashboard</h1>
+    <nav className="py-4 sm:px-10 px-4 bg-[#161717] sticky top-0 z-10 flex flex-row items-center justify-between">
+      <h1 className="sm:text-2xl text-lg font-semibold">Wi Jungle Dashboard</h1>
 
-      <div className="flex flex-row items-center gap-8">
-        <LuSearch className="text-2xl" />
-        <IoIosPulse className="text-2xl" />
+      <div className="flex flex-row items-center sm:gap-8 gap-4">
+        <LuSearch className="sm:text-2xl text-lg" />
+        <IoIosPulse className="sm:text-2xl text-lg" />
 
-        <img src={user} alt="user" className="w-10 h-10 rounded-full border-2 border-white" />
+        <img
+          src={user}
+          alt="user"
+          className="sm:w-10 w-6 sm:h-10 h-6 object-cover rounded-full border-2 border-white"
+        />
+
+        <CgMenuGridO className="sm:hidden block sm:text-2xl text-lg" />
       </div>
     </nav>
   );
