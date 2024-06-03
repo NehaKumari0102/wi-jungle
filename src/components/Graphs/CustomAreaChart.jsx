@@ -41,7 +41,7 @@ const CustomAreaChart = ({ data }) => {
                         wrapperStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     />
                     <Legend />
-                    <Area type="monotone" dataKey="count" name='Event Count' stroke="#fff" fill="#ff0088" />
+                    <Area type="monotone" dataKey="count" name='Event Count' stroke="#fff" fill="#2563eb" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
