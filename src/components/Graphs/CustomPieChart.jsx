@@ -45,8 +45,9 @@ const CustomPieChart = ({ data }) => {
   };
 
   return (
-    <div>
-      <ResponsiveContainer className="p-2" width="100%" height={is500px ? 400 : 300}>
+    <div className="bg-[#1a1a1f] rounded-lg p-4">
+      <h1 className="text-center text-2xl font-semibold my-2">Alert</h1>
+      <ResponsiveContainer width="100%" height={is500px ? 400 : 300}>
         <PieChart >
           <Pie
             dataKey="value"
@@ -65,7 +66,6 @@ const CustomPieChart = ({ data }) => {
         </PieChart>
 
       </ResponsiveContainer>
-      <h1 className="text-center text-lg font-semibold bg-blue-600">Pie Chart</h1>
     </div>
   );
 };

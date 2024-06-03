@@ -1,14 +1,18 @@
 import React from "react";
-import CustomBarChart from "../components/CustomBarChart";
-import CustomPieChart from "../components/CustomPieChart";
-import CustomLineChart from "../components/CustomLineChart";
-import CustomAreaChart from "../components/CustomAreaChart";
-import CustomScatter from "../components/CustomScatter";
+import CustomBarChart from "../components/Graphs/CustomBarChart";
+import CustomPieChart from "../components/Graphs/CustomPieChart";
+import CustomLineChart from "../components/Graphs/CustomLineChart";
+import CustomAreaChart from "../components/Graphs/CustomAreaChart";
+import CustomScatter from "../components/Graphs/CustomScatter";
 import { useMediaQuery } from "@mui/material";
+import SidePanel from "../components/SidePanel/SidePanel";
+import NavBar from "../components/NavBar/NavBar";
 
 const Dashboard = ({ list }) => {
-  const is500px = useMediaQuery("(min-width: 500px)")
-  const listTemplateColumns = `repeat(auto-fill, minmax(${is500px ? 400 : 250}px, 1fr))`;
+  const is500px = useMediaQuery("(min-width: 500px)");
+  const listTemplateColumns = `repeat(auto-fill, minmax(${
+    is500px ? 400 : 250
+  }px, 1fr))`;
   const containerStyle = {
     display: "grid",
     gridTemplateColumns: listTemplateColumns,
@@ -16,18 +20,25 @@ const Dashboard = ({ list }) => {
 
   return (
     <React.Fragment>
-      <nav className="py-4 px-10 bg-blue-600">
-        <h1 className="text-2xl font-semibold">Wi Jungle</h1>
-      </nav>
-      
+      <NavBar />
+
       {/* Check if list is an array and has items */}
       {Array.isArray(list) && list.length > 0 ? (
-        <div className="Dashboard gap-10 py-4" style={containerStyle}>
-          <CustomPieChart data={list} />
-          <CustomBarChart data={list} />
-          <CustomAreaChart data={list} />
-          <CustomLineChart data={list} />
-          <CustomScatter data={list} />
+        <div className="Dashboard flex flex-row">
+          <SidePanel />
+
+          <div className="Graphs gap-y-4 pl-20 flex flex-col p-4">
+            <div
+              className="gridLayout gap-10 p-4 w-full"
+              style={containerStyle}
+            >
+              <CustomPieChart data={list} />
+              <CustomBarChart data={list} />
+              <CustomAreaChart data={list} />
+            </div>
+            <CustomLineChart data={list} />
+            <CustomScatter data={list} />
+          </div>
         </div>
       ) : (
         <p>No data available</p>
